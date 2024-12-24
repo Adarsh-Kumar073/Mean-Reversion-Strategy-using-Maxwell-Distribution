@@ -1,7 +1,7 @@
-**Maxwell Distribution-Based Trading Strategy**
+# **Maxwell Distribution-Based Trading Strategy**
 This repository contains a Python implementation of a trading strategy that uses the Maxwell distribution to identify potential buy opportunities based on price deviations from a moving average. The strategy is further enhanced with stop-loss protection and dynamic position sizing.
 
-**📜 Strategy Overview**
+# **📜 Strategy Overview**
 
 **Concept:**
 The Maxwell distribution is a statistical tool that models the distribution of values, particularly deviations from a central value (in this case, a moving average).
@@ -21,7 +21,7 @@ Uses a simple moving average (SMA) to smooth price data.
 Automatically calculates position size as a percentage of account equity for risk management.
 
 
-**⚙️ Functionality**
+# **⚙️ Functionality**
 **Core Components:**
 
 **Buy Signal Logic:**
@@ -36,7 +36,7 @@ Continuously listens to real-time price updates using WebSocket connections to m
 Sell Signals: This implementation focuses exclusively on buy signals and exits via stop-loss.
 
 
-**🔧 Setup & Usage**
+# **🔧 Setup & Usage**
 **Prerequisites:**
 Python 3.8 or higher.
 
@@ -62,14 +62,14 @@ bash
 Copy code
 python trading_bot.py
 
-**📊 Key Parameters**
+# **📊 Key Parameters**
 Parameter	Description	Default Value
 ma_period	Period for calculating the moving average.	44
 scale_param	Scale parameter for the Maxwell distribution.	44
 buy_threshold	Threshold for the Maxwell CDF to trigger buy signals.	0.1
 stop_loss_pct	Stop loss percentage to minimize potential losses.	50%
 
-**📈 Strategy Workflow**
+# **📈 Strategy Workflow**
 **Price Monitoring:**
 The script listens to price updates via WebSocket in real-time.
 **Signal Generation**:
@@ -79,7 +79,7 @@ The Maxwell CDF is evaluated for buy signals.
 Buys are placed when conditions are met.
 Positions are closed if the stop-loss threshold is triggered.
 
-**🚀 Deployment**
+# **🚀 Deployment**
 **Options for Continuous Operation:
 Run Locally:**
 Use tools like tmux or screen to keep the bot running in the background.
@@ -88,18 +88,18 @@ Deploy on a cloud platform like AWS, GCP, or Azure for uninterrupted operation.
 Alternatively, use Heroku or DigitalOcean for quick deployment.
 
 
-**Thresholds & Parameters:**
+# **Thresholds & Parameters:**
 Modify ma_period, scale_param, and buy_threshold to fit your trading style.
 **Risk Management:**
 Adjust the stop-loss percentage (stop_loss_pct) to suit your risk appetite.
 Asset Selection:
 Update the subscribed symbols and parameters based on the market (e.g., BTCUSDT, ETHUSDT).
 
-**📌 Limitations**
+# **📌 Limitations**
 **No Sell Signals:**
 The current strategy focuses on buy opportunities and stop-loss exits.
 **Real-Time Dependency:**
 Requires continuous WebSocket connectivity for optimal performance.
 
-**⚠️ Disclaimer**
+# **⚠️ Disclaimer**
 This strategy is for educational purposes only. Use at your own risk. The author is not responsible for any financial losses incurred while using this code. Always test thoroughly in a simulated environment before deploying in live trading.
