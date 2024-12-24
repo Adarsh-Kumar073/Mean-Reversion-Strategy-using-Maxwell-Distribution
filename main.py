@@ -9,8 +9,8 @@ import urllib.parse
 from scipy.stats import maxwell
 
 # API keys
-api_key = 'aef54b0bfa3266850aaa956e2de3dd22'
-api_secret = '9e9f18c4728a4314c70dd2e087f89b71'
+api_key = 'Enter your API KEY'
+api_secret = 'Enter your API SECRET '
 
 # WebSocket server URL
 server_url = 'https://fawss.pi42.com/'
